@@ -1,20 +1,13 @@
 import React from 'react';
-import Header from './component/header.js'
+import Header from './component/header.js';
+import Leftmenu from './component/leftbar.js';
 
 const App = () => {
   return(
     <div>
+      <Header />
       <div>
-        <Header />
-      </div>
-      <div>
-
-      </div>
-      <div>
-      
-      </div>
-      <div>
-
+        <Leftmenu />
       </div>
     </div>
   );
