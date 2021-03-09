@@ -39,6 +39,10 @@
   padding-left: 20px;
 }
 
+.search:focus {
+  outline: none;
+}
+
 .right-button-box {
   position: absolute;
   right: 0;
