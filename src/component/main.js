@@ -17,6 +17,30 @@ const main = () => {
           {/* upgrade button box */}
           <div className = 'upgrade-box'>Upgrade</div>
         </div>
+        {/* for you main contents box */}
+        <div className = 'main-interests-box'>
+          <div className = 'interests-content-box'>
+            <div className = 'interest-tag-box'>
+              <div className = 'interest-tag'>#david foster wallace</div>
+              <div className = 'interest-tag'>#education</div>
+              <div className = 'interest-tag'>#marcus aurelius</div>
+              <div className = 'interest-tag'>#nicholas carr</div>
+              <div className = 'interest-tag'>#reading</div>
+            </div>
+            <div className = 'interest-title-box'>
+              <a href = '' className = 'interest-title'>How to Remember What You Read</a>
+            </div>
+            <div className = 'interest-content'>Why is it that some people seem to be able to read a book once and remember every detail of it for life, while others struggle to recall even the title a few days after putting down a book?
+</div>
+            <div className = 'interest-photo'></div>
+            <div className = 'interest-address'>fs.blog</div>
+            <div className = 'interest-button-box'>
+              <div className = 'save-button-box'></div>
+              <div className = 'share-button-box'></div>
+              <div className = 'more-button-box'></div>
+            </div>
+          </div>
+        </div>
         {/* right recommend box */}
         <div className = 'right-recommend-box'>
             {/* recommend keyword box */}
