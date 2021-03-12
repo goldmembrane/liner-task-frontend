@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ShareModal from './modals/shareModal.js';
 import '../css/main.css';
+
 
 // left menu bar와 main contents, right contents를 담기 위한 main component
 
-const main = () => {
+const Main = () => {
+
+  // share button을 누르면 modal이 표시되게 하는 state
+  const [ isOpen, setIsOpen ] = useState(false);
+
+  // share button을 누르면 isOpen state를 변경시키는 함수
+  const openShareModal = () => {
+    setIsOpen(true);
+  }
+
+  // share modal이 열리면, 닫기 위해 state를 변경시키는 함수
+  const closeShareModal = () => {
+    setIsOpen(false);
+  }
+
   return(
       <div className = 'main-wrap-box'>
         {/* left menu bar */}
@@ -36,8 +52,10 @@ const main = () => {
             <div className = 'interest-address'>fs.blog</div>
             <div className = 'interest-button-box'>
               <div className = 'save-button-box'></div>
-              <div className = 'share-button-box'></div>
+              <button className = 'share-button-box' onClick = {openShareModal}></button>
               <div className = 'more-button-box'></div>
+              {/* load share modal */}
+              <ShareModal open = {isOpen} close = {closeShareModal} ></ShareModal>
             </div>
           </div>
         </div>
@@ -58,4 +76,4 @@ const main = () => {
   )
 };
 
-export default main;
+export default Main;
