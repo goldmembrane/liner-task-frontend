@@ -162,6 +162,7 @@
 }
 
 .share-button-box {
+  border: none;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -169,6 +170,7 @@
   background-position: 50%;
   width: 32px;
   height: 32px;
+  outline: none;
 }
 
 .share-button-box:hover {
