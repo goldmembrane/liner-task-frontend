@@ -1,0 +1,52 @@
+.for-you-box {
+  padding-left: 10px;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.for-you-box:hover {
+  background-color: rgba(75, 75, 75, 0.3);
+}
+
+.my-highlights-box {
+  padding-left: 10px;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.my-highlights-box:hover {
+  background-color: rgba(75, 75, 75, 0.3);
+}
+
+.more-box {
+  padding-left: 10px;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.more-box:hover {
+  background-color: rgba(75, 75, 75, 0.3);
+}
+
+.upgrade-box {
+  margin-top: 20px;
+  width: 190px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid rgb(0, 160, 130);
+  line-height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(0, 160, 130);
+}
+
+.upgrade-box:hover {
+  background-color: rgb(0, 160, 130);
+  color: #ffffff;
+}
