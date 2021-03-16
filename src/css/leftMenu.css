@@ -4,6 +4,11 @@
   height: 45px;
   line-height: 45px;
   cursor: pointer;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  text-align: left;
 }
 
 .for-you-box:hover {
@@ -16,6 +21,11 @@
   height: 45px;
   line-height: 45px;
   cursor: pointer;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  text-align: left;
 }
 
 .my-highlights-box:hover {
@@ -28,10 +38,20 @@
   height: 45px;
   line-height: 45px;
   cursor: pointer;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  text-align: left;
 }
 
 .more-box:hover {
   background-color: rgba(75, 75, 75, 0.3);
+}
+
+.selected {
+  font-weight: bold;
+  color: rgb(0, 160, 130);
 }
 
 .upgrade-box {
