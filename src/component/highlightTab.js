@@ -23,76 +23,78 @@ const HighlightTab = () => {
 
     return (
         <React.Fragment>
-            <div className = 'highlight-box'>
-                { isPush ? 
-                <div className = 'highlight-button-box-search-mode'>
-                    <div className = 'highlight-page-dropdown-button'>Pages</div>
-                    <div className = 'highlight-search-bar'>
-                        <input
-                            className = 'highlight-search'
-                            type = 'text'
-                            placeholder = 'search my highlights'
-                        />
-                        <div className = 'highlight-search-button'></div>
+            { isPush ? 
+            <div className = 'highlight-button-box-search-mode'>
+                <div className = 'highlight-page-dropdown-button'>Pages</div>
+                <div className = 'highlight-search-bar'>
+                    <input
+                        className = 'highlight-search'
+                        type = 'text'
+                        placeholder = 'search my highlights'
+                    />
+                    <div className = 'highlight-search-button'></div>
+                </div>
+                <button className = 'cancel-button' onClick = {searchOff}>Cancel</button>
+                <div className = 'search-options-button'>Search Options</div>
+            </div> :
+            <div className = 'highlight-button-box'>
+                <div className = 'highlight-highlight-button'>Highlight</div>
+                <div className = 'highlight-tag-button'>Tags</div>
+                <DropdownButton id = 'page-dropdown-button' title = 'Pages'>
+                    <div className = 'page-option-box'>
+                        <Dropdown.Header className = 'page-label'>
+                            View as
+                        </Dropdown.Header>
+                        <Dropdown.Item className = 'page-option' as = 'button'>
+                            Pages
+                        </Dropdown.Item>
+                        <Dropdown.Item className = 'page-option' as = 'button'>
+                            Highlights
+                        </Dropdown.Item>
                     </div>
-                    <button className = 'cancel-button' onClick = {searchOff}>Cancel</button>
-                    <div className = 'search-options-button'>Search Options</div>
-                </div> :
-                <div className = 'highlight-button-box'>
-                    <div className = 'highlight-highlight-button'>Highlight</div>
-                    <div className = 'highlight-tag-button'>Tags</div>
-                    <DropdownButton id = 'page-dropdown-button' title = 'Pages'>
-                        <div className = 'page-option-box'>
-                            <Dropdown.Header className = 'page-label'>
-                                View as
-                            </Dropdown.Header>
-                            <Dropdown.Item className = 'page-option' as = 'button'>
-                                Pages
-                            </Dropdown.Item>
-                            <Dropdown.Item className = 'page-option' as = 'button'>
-                                Highlights
-                            </Dropdown.Item>
-                        </div>
-                    </DropdownButton>
-                    <DropdownButton id = 'filter-button'>
-                        <div className = 'filter-option-box'>
-                            <Dropdown.Header className = 'filter-tags'>
-                                Color Filter
-                                <div className = 'reset-button'>Reset</div>
-                            </Dropdown.Header>
-                            <Dropdown.Item className = 'filter' as = 'button'>
-                                <span className = 'color-image-1'></span>
-                                Yellow
-                            </Dropdown.Item>
-                            <Dropdown.Item className = 'filter' as = 'button'>
-                                <span className = 'color-image-2'></span>
-                                Mint
-                            </Dropdown.Item>
-                            <Dropdown.Item className = 'filter' as = 'button'>
-                                <span className = 'color-image-3'></span>
-                                Orange
-                            </Dropdown.Item>
-                            <Dropdown.Item className = 'filter' as = 'button'>
-                                <span className = 'color-image-4'></span>
-                                Violet
-                            </Dropdown.Item>
-                            <Dropdown.Item className = 'filter' as = 'button'>
-                                <span className = 'color-image-5'></span>
-                                Blue
-                            </Dropdown.Item>
-                            <Dropdown.Item className = 'filter' as = 'button'>
-                                <span className = 'color-image-6'></span>
-                                Pink
-                            </Dropdown.Item>
-                        </div>
-                    </DropdownButton>
-                    <button className = 'search-button' onClick = {searchOn}></button>
-                </div>}
-                <div className = 'highlight-contents-box'>
+                </DropdownButton>
+                <DropdownButton id = 'filter-button'>
+                    <div className = 'filter-option-box'>
+                        <Dropdown.Header className = 'filter-tags'>
+                            Color Filter
+                            <div className = 'reset-button'>Reset</div>
+                        </Dropdown.Header>
+                        <Dropdown.Item className = 'filter' as = 'button'>
+                            <span className = 'color-image-1'></span>
+                            Yellow
+                        </Dropdown.Item>
+                        <Dropdown.Item className = 'filter' as = 'button'>
+                            <span className = 'color-image-2'></span>
+                            Mint
+                        </Dropdown.Item>
+                        <Dropdown.Item className = 'filter' as = 'button'>
+                            <span className = 'color-image-3'></span>
+                            Orange
+                        </Dropdown.Item>
+                        <Dropdown.Item className = 'filter' as = 'button'>
+                            <span className = 'color-image-4'></span>
+                            Violet
+                        </Dropdown.Item>
+                        <Dropdown.Item className = 'filter' as = 'button'>
+                            <span className = 'color-image-5'></span>
+                            Blue
+                        </Dropdown.Item>
+                        <Dropdown.Item className = 'filter' as = 'button'>
+                            <span className = 'color-image-6'></span>
+                            Pink
+                        </Dropdown.Item>
+                    </div>
+                </DropdownButton>
+                <button className = 'search-button' onClick = {searchOn}></button>
+            </div>}
+            <div className = 'highlight-contents-box'>
+                <div className = 'highlight-contents-title-box'>
                     <div className = 'highlight-contents-title'>How to Remember What You Read</div>
                     <div className = 'highlight-contents-photo'>
                         <div className = 'check-box'></div>
                     </div>
+                </div>
+                <div className = 'highlight-contents-footer-box'>
                     <div className = 'highlight-contents-address'>fs.blog | Mar 16, 2021</div>
                     <div className = 'highlight-contents-button-box'>
                         <DropdownButton id = 'highlight-contents-share-button'>
