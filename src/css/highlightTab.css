@@ -1,14 +1,9 @@
-.highlight-box {
-  position: fixed;
-  z-index: -99999;
-}
-
 .highlight-button-box {
-  margin-left: 350px;
   width: 600px;
   position: relative;
   display: flex;
   align-items: center;
+  margin-left: 350px;
 }
 
 .highlight-highlight-button {
@@ -88,6 +83,10 @@
   background-color: #ffffff;
 }
 
+.page-option:hover {
+  background-color: rgba(150, 150, 150, 0.2);
+}
+
 #filter-button {
   background: url(/src/image/filter.svg) no-repeat;
   background-position: 50%;
@@ -111,6 +110,7 @@
   box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
   position: relative;
   padding: 10px 20px;
+  z-index: 2;
 }
 
 .filter-tags {
@@ -127,6 +127,7 @@
   right: 0;
   top: 5px;
   color: rgba(130, 130, 130, 0.2);
+  cursor: pointer;
 }
 
 .color-image-1 {
@@ -220,8 +221,8 @@
   width: 600px;
   display: flex;
   align-items: center;
-  margin-left: 350px;
   position: relative;
+  margin-left: 350px;
 }
 
 .highlight-page-dropdown-button {
@@ -304,44 +305,50 @@
 }
 
 .highlight-contents-box {
-  margin-left: 350px;
-  width: 600px;
-  height: 220px;
-  position: relative;
   margin-top: 50px;
   border-bottom: 1px solid rgba(120, 120, 120, 0.2);
-  z-index: 10;
+  width: 600px;
+  margin-left: 350px;
 }
 
-.highlight-contents-photo {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: url(/src/image/example1.jpeg) no-repeat;
-  background-position: 50%;
-  width: 96px;
-  height: 96px;
-  cursor: pointer;
-  z-index: -99;
+.highlight-contents-title-box {
+  display: flex;
 }
 
 .highlight-contents-title {
   font-weight: bold;
   font-size : 22px;
+  width: 450px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.highlight-contents-photo {
+  background: url(/src/image/example1.jpeg) no-repeat;
+  background-position: 50%;
+  width: 96px;
+  height: 96px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.highlight-contents-footer-box {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .highlight-contents-address {
   font-size: 14px;
   color: rgba(75, 75, 75, 0.6);
-  margin-top: 150px;
+  display: inline-flex;
+  margin-right: 400px;
 }
 
 .highlight-contents-button-box {
-  position: absolute;
-  right: 0;
-  bottom: 20px;
   display: inline-flex;
-  z-index: 99;
 }
 
 #highlight-contents-share-button {
@@ -363,12 +370,9 @@
   width: 200px;
   height: 100px;
   background-color: #ffffff;
-  padding: 0 10px;
-  margin: 10px 0;
+  padding: 10px 0;
   box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
   border-radius: 5px;
-  position: absolute;
-  z-index: 5;
 }
 
 .full-highlight {
@@ -425,9 +429,9 @@
   width: 200px;
   height: 240px;
   background-color: #ffffff;
-  padding: 0 10px;
-  margin: 10px 0;
+  padding: 10px 0;
   box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
+  border-radius: 5px;
 }
 
 .export-button {
