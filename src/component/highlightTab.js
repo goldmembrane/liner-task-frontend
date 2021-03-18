@@ -5,7 +5,9 @@ import '../css/highlightTab.css';
 
 // highlight tab 화면 구성 코드
 
-const HighlightTab = () => {
+const HighlightTab = (props) => {
+
+    const { detail } = props;
 
     // search button을 눌렀는지 확인하는 state
     const [ isPush, setIsPush ] = useState(false);
@@ -89,7 +91,7 @@ const HighlightTab = () => {
             </div>}
             <div className = 'highlight-contents-box'>
                 <div className = 'highlight-contents-title-box'>
-                    <div className = 'highlight-contents-title'>How to Remember What You Read</div>
+                    <button className = 'highlight-contents-title' onClick = {detail}>How to Remember What You Read</button>
                     <div className = 'highlight-contents-photo'>
                         <div className = 'check-box'></div>
                     </div>
