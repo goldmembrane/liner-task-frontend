@@ -4,6 +4,7 @@ import RightRecommend from './rightRecommend.js';
 import ForYouTab from './forYouTab.js';
 import HighlightTab from './highlightTab.js';
 import MainDetailTab from './mainDetailTab.js';
+import HighlightDetailTab from './highlightDetailTab.js';
 import '../css/main.css';
 
 
@@ -73,9 +74,18 @@ const Main = () => {
                 <MainDetailTab back = {changeToReturn}/>
               )
             }
+          } else if ( isSelect === 'highlight' ) {
+            if ( detail === false ) {
+              return (
+                <HighlightTab detail = {changeToDetail}/>
+              )
+            }else {
+              return (
+                <HighlightDetailTab back = {changeToReturn} />
+              )
+            }
           }
         })()}
-        {isSelect === 'highlight' && <HighlightTab />}
         {/* right recommend box */}
         <div className = 'right-recommend-box'>
           <RightRecommend />
