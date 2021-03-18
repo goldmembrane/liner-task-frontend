@@ -3,6 +3,7 @@ import LeftMenu from './leftMenu.js';
 import RightRecommend from './rightRecommend.js';
 import ForYouTab from './forYouTab.js';
 import HighlightTab from './highlightTab.js';
+import MainDetailTab from './mainDetailTab.js';
 import '../css/main.css';
 
 
@@ -41,20 +42,40 @@ const Main = () => {
     setIsOpen(false);
   }
 
+  // title를 click하면 detail page로 넘기기 위한 state 
+  const [ detail, setDetail ] = useState(false);
+
+  // title를 click하면 detail state를 변경시키는 함수
+  const changeToDetail = () => {
+    setDetail(true);
+  }
+
+  // detail state를 false로 변경시키는 함수
+  const changeToReturn = () => {
+    setDetail(false);
+  }
+
   return(
       <div className = 'main-wrap-box'>
         {/* left menu bar */}
         <div className = 'leftmenu-box'>
-          <LeftMenu selected = {isSelect} forYou = {changeToForYou} highlight = {changeToHighlight} more = {changeToMore}/>
+          <LeftMenu selected = {isSelect} forYou = {changeToForYou} highlight = {changeToHighlight} more = {changeToMore} back = {changeToReturn}/>
         </div>
         {/* main contents box */}
-        {isSelect === 'forYou' &&
-        // for you main contents box
-        <ForYouTab openState = {isOpen} toOpen = {openShareModal} toClose = {closeShareModal}/>
-        }
-        {isSelect === 'highlight' &&
-        // highlight main contents box
-        <HighlightTab />}
+        {(() => {
+          if (isSelect === 'forYou') {
+            if (detail === false) {
+              return (
+                <ForYouTab openState = {isOpen} toOpen = {openShareModal} toClose = {closeShareModal} detail = {changeToDetail} />
+              )
+            }else {
+              return (
+                <MainDetailTab back = {changeToReturn}/>
+              )
+            }
+          }
+        })()}
+        {isSelect === 'highlight' && <HighlightTab />}
         {/* right recommend box */}
         <div className = 'right-recommend-box'>
           <RightRecommend />

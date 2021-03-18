@@ -8,7 +8,7 @@ import '../css/forYouTab.css';
 
 const ForYouTab = (props) => {
 
-    const { openState, toOpen, toClose } = props;
+    const { openState, toOpen, toClose, detail } = props;
 
     return (
         <React.Fragment>
@@ -22,7 +22,7 @@ const ForYouTab = (props) => {
                     <div className = 'interest-tag'>#reading</div>
                     </div>
                     <div className = 'interest-title-box'>
-                    <a href = '' className = 'interest-title'>How to Remember What You Read</a>
+                    <button className = 'interest-title' onClick = {detail}>How to Remember What You Read</button>
                     </div>
                     <div className = 'interest-content'>Why is it that some people seem to be able to read a book once and remember every detail of it for life, while others struggle to recall even the title a few days after putting down a book?
                     </div>
