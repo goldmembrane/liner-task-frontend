@@ -1,0 +1,107 @@
+.share-modal-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.open-modal {
+  display: flex;
+  align-items: center;
+}
+
+.share-modal-box {
+  width: 450px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px 30px;
+}
+
+.share-modal-title-box {
+  position: relative;
+}
+
+.share-modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  cursor: pointer;
+  outline: none;
+}
+
+.social-icons-box {
+  border-bottom: 1px solid rgba(80, 80, 80, 0.2);
+  height: 60px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.facebook {
+  background: url(/src/image/facebook.svg) no-repeat;
+  background-position: 50%;
+}
+
+.twitter {
+  background: url(/src/image/twitter.svg) no-repeat;
+  background-position: 50%;
+}
+
+.linkdin {
+  background: url(/src/image/linkdin.svg) no-repeat;
+  background-position: 50%;
+}
+
+.messenger {
+  background: url(/src/image/messenger.svg) no-repeat;
+  background-position: 50%;
+}
+
+.line {
+  background: url(/src/image/line.svg) no-repeat;
+  background-position: 50%;
+}
+
+.mail {
+  background: url(/src/image/mail.svg) no-repeat;
+  background-position: 50%;
+}
+
+.copy-address-box {
+  height: 40px;
+  padding: 20px 0 0 20px;
+  position: relative;
+}
+
+.address {
+  width: 300px;
+  color: rgba(100, 100, 100, 0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copy-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(0, 160, 130);
+}

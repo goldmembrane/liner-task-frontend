@@ -1,0 +1,76 @@
+#highlight-contents-more-button {
+  background: url(/src/image/more-light.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+
+#highlight-contents-more-button:hover {
+  background-color: rgba(150, 150, 150, 0.2);
+}
+
+.highlight-more-option-box {
+  width: 200px;
+  height: 240px;
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
+  border-radius: 5px;
+}
+
+.export-button {
+  background: url(/src/image/export.svg) no-repeat;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+  width: 32px;
+  height: 32px;
+}
+
+.edit-button {
+  background: url(/src/image/edit.svg) no-repeat;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+  width: 32px;
+  height: 32px;
+}
+
+.original-button {
+  background: url(/src/image/original.svg) no-repeat;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+  width: 32px;
+  height: 32px;
+}
+
+.trash-button {
+  background: url(/src/image/trash.svg) no-repeat;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+  width: 32px;
+  height: 32px;
+}
+
+.more-highlight-option {
+  width: 200px;
+  height: 60px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.more-highlight-option:hover {
+  background-color: rgba(150, 150, 150, 0.2);
+}

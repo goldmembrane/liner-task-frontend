@@ -1,0 +1,57 @@
+#highlight-contents-share-button {
+  background: url(/src/image/share-header.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+#highlight-contents-share-button:hover {
+  background-color: rgba(150, 150, 150, 0.2);
+}
+
+.share-option-box {
+  width: 200px;
+  height: 100px;
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
+  border-radius: 5px;
+}
+
+.full-highlight {
+  background: url(/src/image/fulltext.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.summary-highlight {
+  background: url(/src/image/summary.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.share-option {
+  width: 200px;
+  height: 50px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.share-option:hover {
+  background-color: rgba(150, 150, 150, 0.2);
+}

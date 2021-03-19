@@ -1,0 +1,70 @@
+#more-button-box {
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  background: url(/src/image/more-light.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+}
+
+#more-button-box:hover {
+  background-color: rgba(75, 75, 75, 0.1);
+}
+
+.more-option-box {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
+}
+
+.more-option {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(50, 50, 50, 0.7);
+  display: flex;
+}
+
+.more-option:hover {
+  background-color: rgba(150, 150, 150, 0.3);
+}
+
+.like-up-image {
+  background: url(/src/image/like-dropdown.svg) no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.like-down-image {
+  background: url(/src/image/dislike-dropdown.svg) no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.hide-image {
+  background: url(/src/image/hide-dropdown.svg) no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: 50%;
+  display: inline-block;
+  margin-right: 7px;
+}

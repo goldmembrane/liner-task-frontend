@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
+import PageDropdown from './dropdown/pageDropdown.js';
+import FilterDropdown from './dropdown/filterDropdown.js';
+import ShareDropdown from './dropdown/shareDropdown.js';
+import HighlightMoreDropdown from './dropdown/highlightMoreDropdown.js';
 import '../css/highlightTab.css';
 
 // highlight tab 화면 구성 코드
 
 const HighlightTab = (props) => {
 
-    const { detail } = props;
+    const { fullOpenState, summaryOpenState, toFullOpen, toFullClose, toSummaryOpen, toSummaryClose, detail } = props;
 
     // search button을 눌렀는지 확인하는 state
     const [ isPush, setIsPush ] = useState(false);
@@ -42,51 +44,8 @@ const HighlightTab = (props) => {
             <div className = 'highlight-button-box'>
                 <div className = 'highlight-highlight-button'>Highlight</div>
                 <div className = 'highlight-tag-button'>Tags</div>
-                <DropdownButton id = 'page-dropdown-button' title = 'Pages'>
-                    <div className = 'page-option-box'>
-                        <Dropdown.Header className = 'page-label'>
-                            View as
-                        </Dropdown.Header>
-                        <Dropdown.Item className = 'page-option' as = 'button'>
-                            Pages
-                        </Dropdown.Item>
-                        <Dropdown.Item className = 'page-option' as = 'button'>
-                            Highlights
-                        </Dropdown.Item>
-                    </div>
-                </DropdownButton>
-                <DropdownButton id = 'filter-button'>
-                    <div className = 'filter-option-box'>
-                        <Dropdown.Header className = 'filter-tags'>
-                            Color Filter
-                            <div className = 'reset-button'>Reset</div>
-                        </Dropdown.Header>
-                        <Dropdown.Item className = 'filter' as = 'button'>
-                            <span className = 'color-image-1'></span>
-                            Yellow
-                        </Dropdown.Item>
-                        <Dropdown.Item className = 'filter' as = 'button'>
-                            <span className = 'color-image-2'></span>
-                            Mint
-                        </Dropdown.Item>
-                        <Dropdown.Item className = 'filter' as = 'button'>
-                            <span className = 'color-image-3'></span>
-                            Orange
-                        </Dropdown.Item>
-                        <Dropdown.Item className = 'filter' as = 'button'>
-                            <span className = 'color-image-4'></span>
-                            Violet
-                        </Dropdown.Item>
-                        <Dropdown.Item className = 'filter' as = 'button'>
-                            <span className = 'color-image-5'></span>
-                            Blue
-                        </Dropdown.Item>
-                        <Dropdown.Item className = 'filter' as = 'button'>
-                            <span className = 'color-image-6'></span>
-                            Pink
-                        </Dropdown.Item>
-                    </div>
-                </DropdownButton>
+                <PageDropdown />
+                <FilterDropdown />
                 <button className = 'search-button' onClick = {searchOn}></button>
             </div>}
             <div className = 'highlight-contents-box'>
@@ -99,38 +58,8 @@ const HighlightTab = (props) => {
                 <div className = 'highlight-contents-footer-box'>
                     <div className = 'highlight-contents-address'>fs.blog | Mar 16, 2021</div>
                     <div className = 'highlight-contents-button-box'>
-                        <DropdownButton id = 'highlight-contents-share-button'>
-                            <div className = 'share-option-box'>
-                                <Dropdown.Item className = 'share-option' as = 'button'>
-                                    <span className = 'full-highlight'></span>
-                                    Full text with highlights
-                                </Dropdown.Item>
-                                <Dropdown.Item className = 'share-option' as = 'button'>
-                                    <span className = 'summary-highlight'></span>
-                                    Highlight summary
-                                </Dropdown.Item> 
-                            </div>
-                        </DropdownButton>
-                        <DropdownButton id = 'highlight-contents-more-button'>
-                            <div className = 'highlight-more-option-box'>
-                                <Dropdown.Item className = 'more-highlight-option' as = 'button'>
-                                    <span className = 'export-button'></span>
-                                    Export
-                                </Dropdown.Item>
-                                <Dropdown.Item className = 'more-highlight-option' as = 'button'>
-                                    <span className = 'edit-button'></span>
-                                    Edit Title
-                                </Dropdown.Item>
-                                <Dropdown.Item className = 'more-highlight-option' as = 'button'>
-                                    <span className = 'original-button'></span>
-                                    View Original
-                                </Dropdown.Item>
-                                <Dropdown.Item className = 'more-highlight-option' as = 'button'>
-                                    <span className = 'trash-button'></span>
-                                    Move to trash
-                                </Dropdown.Item>
-                            </div>
-                        </DropdownButton>
+                        <ShareDropdown full = {fullOpenState} summary = {summaryOpenState} fullOpen = {toFullOpen} summaryOpen = {toSummaryOpen} fullClose = {toFullClose} summaryClose = {toSummaryClose}/>
+                        <HighlightMoreDropdown />
                     </div>
                 </div>
             </div>

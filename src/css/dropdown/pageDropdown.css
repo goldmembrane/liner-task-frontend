@@ -1,0 +1,47 @@
+#page-dropdown-button {
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 300px;
+  color: rgba(70, 70, 70, 0.6);
+  border: none;
+  background-color: #fff;
+  outline: none;
+}
+
+#page-dropdown-button:hover {
+  color: rgba(20, 20, 20, 0.9);
+}
+
+.page-option-box {
+  width: 150px;
+  height: 120px;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  box-shadow: 10px 10px 10px 10px rgba(200, 200, 200, 0.2);
+  border-radius: 5px;
+}
+
+.page-label {
+  width: 150px;
+  height: 40px;
+  text-align: left;
+  line-height: 50px;
+}
+
+.page-option {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.page-option:hover {
+  background-color: rgba(150, 150, 150, 0.2);
+}

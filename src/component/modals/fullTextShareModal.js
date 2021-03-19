@@ -1,17 +1,19 @@
 import React from 'react';
-import '../../css/modal/shareModal.css';
+import '../../css/modal/fullTextShareModal.css';
 
-const ShareModal = (props) => {
+const FullTextShareModal = (props) => {
     const { open, close } = props;
-  return(
-    <div className = {open ? 'open-modal share-modal-wrap' : 'share-modal-wrap'}>
+
+    return (
+        <div className = {open ? 'open-modal full-text-share-modal-wrap' : 'full-text-share-modal-wrap'}>
         {open ? ( 
-        <div className = 'share-modal-box'>
-            <div className = 'share-modal-title-box'>
-                <h2>Share Origin Page</h2>
-                <button className = 'share-modal-close' onClick = {close}>X</button>
+        <div className = 'full-text-share-modal-box'>
+            <div className = 'full-text-share-modal-title-box'>
+                <h2>Share Full Text with Highlights</h2>
+                <button className = 'full-text-share-modal-close' onClick = {close}>X</button>
             </div>
-            <div className = 'share-modal-content-box'>
+            <div className = 'label'>Anyone with link can view this page with highlights.</div>
+            <div className = 'full-text-share-modal-content-box'>
                 <div className = 'social-icons-box'>
                     <div className = 'icon facebook'></div>
                     <div className = 'icon twitter'></div>
@@ -27,7 +29,7 @@ const ShareModal = (props) => {
             </div>
         </div>) : null}
     </div>
-  );
+    );
 };
 
-export default ShareModal;
+export default FullTextShareModal;
