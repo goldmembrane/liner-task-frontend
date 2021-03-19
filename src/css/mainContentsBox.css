@@ -1,0 +1,96 @@
+.main-interests-box {
+  margin-left: 350px;
+  width: 600px;
+  height: 250px;
+  position: relative;
+  z-index: 99;
+}
+
+.interest-tag {
+  margin-top: 50px;
+  display: inline-block;
+  color: rgb(0, 160, 130);
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.interest-tag:hover {
+  color: rgb(0, 120, 100);
+}
+
+.interest-title-box {
+  margin-top: 20px;
+}
+
+.interest-title {
+  font-size: 20px;
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.interest-content {
+  width: 450px;
+  color: rgba(75, 75, 75, 0.9);
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.interest-photo {
+  margin-left: 50px;
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  border-radius: 4px;
+  background: url(/src/image/example1.jpeg) no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+.interest-address {
+  margin-top: 20px;
+  color: rgba(75, 75, 75, 0.6);
+  font-size: 14px;
+}
+
+.interest-button-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-flex;
+}
+
+.save-button-box {
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  background: url(/src/image/save.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.save-button-box:hover {
+  background-color: rgba(75, 75, 75, 0.1);
+}
+
+.share-button-box {
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  background: url(/src/image/share-header.svg) no-repeat;
+  background-position: 50%;
+  width: 32px;
+  height: 32px;
+  outline: none;
+}
+
+.share-button-box:hover {
+  background-color: rgba(75, 75, 75, 0.1);
+}
