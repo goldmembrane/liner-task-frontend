@@ -5,18 +5,17 @@ import ShareModal from './modals/shareModal.js';
 
 const RelevantPage = (props) => {
 
-    const { openState, toOpen, toClose } = props;
+    const { openState, toOpen, toClose, item } = props;
     return (
         <React.Fragment>
             <div className = 'main-relevant-box'>
                 <div className = 'relevant-content-box'>
                     <div className = 'relevant-title-box'>
-                    <button className = 'relevant-title'>How to Remember What You Read</button>
+                    <button className = 'relevant-title'>{item.snippet.title}</button>
                     </div>
-                    <div className = 'relevant-content'>Why is it that some people seem to be able to read a book once and remember every detail of it for life, while others struggle to recall even the title a few days after putting down a book?
-                    </div>
-                    <div className = 'relevant-photo'></div>
-                    <div className = 'relevant-address'>fs.blog</div>
+                    <div className = 'relevant-content'>{item.snippet.description}</div>
+                    <img className = 'relevant-photo' src = {item.snippet.image} alt = ''></img>
+                    <div className = 'relevant-address'>{item.snippet.address}</div>
                     <div className = 'relevant-button-box'>
                         <div className = 'save-button-box'></div>
                         <button className = 'share-button-box' onClick = {toOpen}></button>
