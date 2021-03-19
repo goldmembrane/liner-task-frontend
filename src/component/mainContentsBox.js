@@ -7,37 +7,28 @@ import '../css/mainContentsBox.css';
 
 const MainContentsBox = (props) => {
 
-    const { openState, toOpen, toClose, detail } = props;
+    const { openState, toOpen, toClose, detail, item, change } = props;
 
     return (
         <React.Fragment>
-            <div className = 'main-headline-box'>
-                <div className = 'main-headline'>For You</div>
-                <div className = 'language'>language</div>
-                <div className = 'main-description'>Picked by LINER, just for you</div>
-            </div>
+            
             <div className = 'main-interests-box'>
                 <div className = 'interests-content-box'>
                     <div className = 'interest-tag-box'>
-                    <div className = 'interest-tag'>#david foster wallace</div>
-                    <div className = 'interest-tag'>#education</div>
-                    <div className = 'interest-tag'>#marcus aurelius</div>
-                    <div className = 'interest-tag'>#nicholas carr</div>
-                    <div className = 'interest-tag'>#reading</div>
+                        <div className = 'interest-tag'>{item.snippet.tags.tagName}</div>
                     </div>
                     <div className = 'interest-title-box'>
-                    <button className = 'interest-title' onClick = {detail}>How to Remember What You Read</button>
+                    <button className = 'interest-title' onClick = {() => {change(item); detail()}}>{item.snippet.title}</button>
                     </div>
-                    <div className = 'interest-content'>Why is it that some people seem to be able to read a book once and remember every detail of it for life, while others struggle to recall even the title a few days after putting down a book?
-                    </div>
-                    <div className = 'interest-photo'></div>
-                    <div className = 'interest-address'>fs.blog</div>
+                    <div className = 'interest-content'>{item.snippet.description}</div>
+                    <img className = 'interest-photo' src = {item.snippet.image} alt = ''></img>
+                    <div className = 'interest-address'>{item.snippet.address}</div>
                     <div className = 'interest-button-box'>
                         <div className = 'save-button-box'></div>
                         <button className = 'share-button-box' onClick = {toOpen}></button>
                         <MoreDropdown />
                         {/* load share modal */}
-                        <ShareModal open = {openState} close = {toClose} ></ShareModal>
+                        <ShareModal open = {openState} close = {toClose} address = {item.snippet.url}></ShareModal>
                     </div>
                 </div>
             </div>

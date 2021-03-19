@@ -47,8 +47,6 @@
   width: 96px;
   height: 96px;
   border-radius: 4px;
-  background: url(/src/image/example1.jpeg) no-repeat;
-  background-position: 50%;
   cursor: pointer;
 }
 

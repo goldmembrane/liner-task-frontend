@@ -3,80 +3,9 @@
   width: 600px;
 }
 
-.main-detail-button-box {
-  width: 640px;
-  height: 40px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.back-to-main {
-  background: url(/src/image/back.svg) no-repeat;
-  background-position: 50%;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: #ffffff;
-}
-
-.back-to-main:hover {
-  background-color: rgba(150, 150, 150, 0.2);
-}
-
-.main-detail-save-button {
-  display: inline-block;
-  margin-left: 500px;
-  background: url(/src/image/save.svg) no-repeat;
-  background-position: 50%;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.main-detail-save-button:hover {
-  background-color: rgba(150, 150, 150, 0.2);
-}
-
-.main-detail-share-button {
-  display: inline-block;
-  background: url(/src/image/share-header.svg) no-repeat;
-  background-position: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  margin-left: 10px;
-  border-radius: 50%;
-}
-
-.main-detail-share-button:hover {
-  background-color: rgba(150, 150, 150, 0.2);
-}
-
-.main-detail-more-button {
-  display: inline-block;
-  background: url(/src/image/more-light.svg) no-repeat;
-  background-position: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  margin-left: 10px;
-  border-radius: 50%;
-}
-
-.main-detail-more-button:hover {
-  background-color: rgba(150, 150, 150, 0.2);
-}
-
 .main-detail-photo-box {
   width: 640px;
   height: 200px;
-  background: url(/src/image/bigExample.jpeg) no-repeat;
-  background-position: 50%;
   margin-bottom: 20px;
 }
 
