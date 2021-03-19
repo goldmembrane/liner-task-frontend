@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+#liner-task_client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#파일 구조
 
-## Available Scripts
+```
++--src
+  +--component
+    +--dropdown
+    +--modal
+  +--css
+  +--image
++--fakeData
+```
 
-In the project directory, you can run:
+# 1. 공통 - header
 
-### `npm start`
+- 과제 설명에 나와있는대로 버튼과 검색 바를 배치만 하였습니다.
+- css로 버튼을 hover할 시 이펙트를 추가하였습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 2. 공통 - left menu
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- state를 따로 지정하여, for you과 highlight 탭을 누를 시 각각 main page 영역이 다르게 렌더링 되도록 구현하였습니다.
+- 처음 화면이 렌더링 될 때에는 for you 탭이 렌더링 되도록 초기화하였습니다.
+- hooks를 이용해 state 설정과 변경을 구현하였습니다.
 
-### `npm test`
+# 3. 우측 - Trending keywords, pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 우측에 Trending Keywords와 pages를 담을 수 있는 box 두 개를 구현하였습니다.
+- left menu의 state 변경과 관련해서 변하지 않습니다.
 
-### `npm run build`
+# 4. For You 탭
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 처음 렌더링되거나 for you 탭을 클릭 시 메인 화면에 나오는 tab page입니다.
+- 임의로 fake data를 만들어서 map을 통해 리스트로 나열하였습니다.
+- title을 클릭하면 detail state가 true로 바뀌면서 detail page로 이동합니다.
+- modal창과 dropdown menu는 component로 분리하였습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 5. My Highlight 탭
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 왼쪽의 highlight 탭을 클릭시 메인 화면에 나오는 tab page입니다.
+- 임의로 data를 채워 넣었습니다.
+- 각각에 맞는 dropdown menu를 구성하였고, search(돋보기 모양)버튼을 클릭하면 ui가 변화한 search mode가 렌더링 됩니다.
+- 여기의 제목을 클릭하면 detail page로 넘어가지 않습니다.(시간 계산을 잘못하였습니다 죄송합니다 ㅠㅠ)
 
-### `npm run eject`
+# 6. Detail page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- for you tab의 제목을 클릭하면 메인 화면에 나오는 tab page입니다.
+- for you tab의 title을 클릭 시, selectedItem의 state가 클릭된 제목이 속해있는 배열 번호로 바뀌면서 detail page가 렌더링 됩니다.
+- 오른쪽의 Trending XX 부분이 Relevant XX로 전환됩니다.
+- 뒤로 가기 버튼을 누르면 detail state가 false로 전환되면서 다시 for you tab으로 이동합니다.
+- 페이지 하단에 fakeData로 채워넣은 relevant page가 목록으로 표시됩니다.
+- relevatn page의 제목을 클릭하면 그 제목의 detail page가 화면에 렌더링 됩니다.
