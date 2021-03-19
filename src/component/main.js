@@ -90,7 +90,7 @@ const Main = () => {
               )
             }else {
               return (
-                <MainDetailTab back = {changeToReturn}/>
+                <MainDetailTab openState = {isOpen} toOpen = {openShareModal} toClose = {closeShareModal} back = {changeToReturn}/>
               )
             }
           } else if ( isSelect === 'highlight' ) {

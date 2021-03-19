@@ -11,6 +11,11 @@ const MainContentsBox = (props) => {
 
     return (
         <React.Fragment>
+            <div className = 'main-headline-box'>
+                <div className = 'main-headline'>For You</div>
+                <div className = 'language'>language</div>
+                <div className = 'main-description'>Picked by LINER, just for you</div>
+            </div>
             <div className = 'main-interests-box'>
                 <div className = 'interests-content-box'>
                     <div className = 'interest-tag-box'>

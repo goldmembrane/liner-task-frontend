@@ -1,11 +1,12 @@
 import React from 'react';
 import '../css/mainDetailTab.css';
+import RelevantPage from './relevantPage.js';
 
 // detail tab 화면 구성 코드 - main version
 
 const MainDetailTab = (props) => {
 
-    const { back } = props;
+    const { openState, toOpen, toClose, back } = props;
 
     return (
         <React.Fragment>
@@ -66,6 +67,7 @@ const MainDetailTab = (props) => {
                     </div>
                 </div>
             </div>
+            <RelevantPage openState = {openState} open = {toOpen} close = {toClose} />
         </React.Fragment>
     );
 };

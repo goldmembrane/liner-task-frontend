@@ -1,36 +1,12 @@
-.main-headline-box {
+.main-relevant-box {
   margin-left: 350px;
   width: 600px;
-  height: 100px;
-  margin-top: 50px;
-}
-
-.main-headline {
-  font-weight: bold;
-  font-size: 16px;
-  display: inline-block;
-}
-
-.language {
-  display: inline-block;
-  margin-left: 500px;
-  font-size: 16px;
-}
-
-.main-description {
-  font-size: 12px;
-  color: rgba(75, 75, 75, 0.6);
-}
-
-.main-interests-box {
-  margin-left: 350px;
-  width: 600px;
-  height: 200px;
+  height: 250px;
   position: relative;
   z-index: 99;
 }
 
-.interest-tag {
+.relevant-tag {
   margin-top: 50px;
   display: inline-block;
   color: rgb(0, 160, 130);
@@ -40,15 +16,15 @@
   cursor: pointer;
 }
 
-.interest-tag:hover {
+.relevant-tag:hover {
   color: rgb(0, 120, 100);
 }
 
-.interest-title-box {
+.relevant-title-box {
   margin-top: 20px;
 }
 
-.interest-title {
+.relevant-title {
   font-size: 20px;
   color: rgb(20, 20, 20);
   font-weight: bold;
@@ -58,14 +34,14 @@
   cursor: pointer;
 }
 
-.interest-content {
+.relevant-content {
   width: 450px;
   color: rgba(75, 75, 75, 0.9);
   margin-top: 40px;
   display: inline-block;
 }
 
-.interest-photo {
+.relevant-photo {
   margin-left: 50px;
   display: inline-block;
   width: 96px;
@@ -76,17 +52,17 @@
   cursor: pointer;
 }
 
-.interest-address {
+.relevant-address {
   margin-top: 20px;
   color: rgba(75, 75, 75, 0.6);
   font-size: 14px;
 }
 
-.interest-button-box {
-  display: inline-flex;
+.relevant-button-box {
   position: absolute;
   right: 0;
   bottom: 0;
+  display: inline-flex;
 }
 
 .save-button-box {
