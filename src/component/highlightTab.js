@@ -27,6 +27,13 @@ const HighlightTab = (props) => {
 
     return (
         <React.Fragment>
+            <div className = 'highlight-headline-box'>
+                <div className = 'highlight-headline'>
+                    My Highlights
+                </div>
+                <div className = 'information'></div>
+                <div className = 'highlight-state'>1 page, 0 highlights</div>
+            </div>
             { isPush ? 
             <div className = 'highlight-button-box-search-mode'>
                 <div className = 'highlight-page-dropdown-button'>Pages</div>
